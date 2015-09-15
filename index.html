@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    
+<head>
+<link rel= "stylesheet" href= "index.css" type= " text/css"/>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="500" onmousemove="movePad(event)" >You see this if canvas not supported</canvas>
+	<label id="gameTimer"></label>
+</body>
+	<script src="src/boxBarrier.js"></script>
+	<script src="src/pad.js"></script>
+	<script src="src/balls.js"></script>
+	<script src="src/gameCanvas.js"></script>
+	<script src="src/gameLogic.js"></script>
+	<footer><p>&copy; Created by: Nestor Gonzalez & Jake Martinez 2015 All rights reserved.</p></footer>
+	<script>
+		registerTimer(document.getElementById('gameTimer'));
+		drawSetup(document.getElementById('myCanvas'));
+		document.addEventListener('mouseup', turnOnBalls);
+		document.addEventListener('touchmove',touchMovePad);
+	</script>
+    
+</html>
